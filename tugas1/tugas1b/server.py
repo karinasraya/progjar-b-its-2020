@@ -1,5 +1,6 @@
 import sys
 import socket
+SIZE = 100
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Bind the socket to the port
@@ -15,11 +16,16 @@ while True:
     print("waiting for a connection")
     connection, client_address = sock.accept()
     print(f"connection from {client_address}")
+    # Accept Request
+    request = connection.recv(SIZE)
+    client_request = open(request.decode(),"rb")
+    print("Request Accepted")
     # Receive the data in small chunks and retransmit it
-    fl = open("send.txt", 'rb')
-    konten = fl.read(100)
-    message = str(konten)
-    print(f"sending {message}")
-    connection.sendall(message.encode())
+    while True:
+        received = client_request.read(SIZE)
+        if not received :
+            break
+        connection.sendall(received)
+        print("Send Data")
     # Clean up the connection
     connection.close()

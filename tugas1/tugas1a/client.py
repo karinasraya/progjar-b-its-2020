@@ -19,7 +19,7 @@ try:
     amount_received = 0
     amount_expected = len(message)
     while amount_received < amount_expected:
-        data = sock.recv(64)
+        data = sock.recv(100)
         amount_received += len(data)
         print(f"{data}")
 finally:

@@ -1,5 +1,6 @@
 import sys
 import socket
+SIZE = 100
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Connect the socket to the port where the server is listening
@@ -7,15 +8,17 @@ port = 31002
 server_address = ('localhost', port)
 print(f"connecting to {server_address}")
 sock.connect(server_address)
-with open('received.txt', 'wb') as f:
-    print ('file opened')
-    while True:
-        print('receiving data...')
-        data = sock.recv(100)
-        print('data=%s', (data))
-        if not data:
-            break
-        # write data to a file
-        f.write(data)
-f.close()
-sock.close()
+try:
+    # Send Request
+    message = 'send.txt'
+    print(f"sending {message} as request")
+    sock.sendall(message.encode())
+    # Look response
+    respon_received = open("received.txt", "wb")
+    if not respon_received:
+        print("Request Rejected\n")
+    respon_received.write(sock.recv(SIZE))
+    print("Request Accepted\n")
+
+finally:
+    sock.close()

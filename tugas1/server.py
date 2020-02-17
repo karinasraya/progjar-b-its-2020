@@ -7,6 +7,7 @@ port = 31000
 server_address = ('localhost', port)
 print("starting up")
 print(f"connection from {server_address}")
+# Menghubungkan alamat ip dengan port x ke socket
 sock.bind(server_address)
 # Listen for incoming connections
 sock.listen(1)
