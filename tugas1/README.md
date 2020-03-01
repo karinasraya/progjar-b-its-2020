@@ -2,12 +2,12 @@
 
 * Menjalankan client.py dan server.py dengan port 31000, 31001, dan 31002
 
-![31000_client](/Capture/31000_client.png)
-![31000_server](/Capture/31000_server.png)
-![31001_client](/Capture/31001_client.png)
-![31001_server](/Capture/31001_server.png)
-![31002_client](/Capture/31002_client.png)
-![31002_server](/Capture/31002_server.png)
+![31000_client](Capture/31000_client.png)
+![31000_server](Capture/31000_server.png)
+![31001_client](Capture/31001_client.png)
+![31001_server](Capture/31001_server.png)
+![31002_client](Capture/31002_client.png)
+![31002_server](Capture/31002_server.png)
 
 * Mencoba mengirimkan file dari client ke server
 
