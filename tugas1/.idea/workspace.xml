@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66df47de-a22b-4cea-910d-d27cae9c2540" name="Default Changelist" comment="" />
+    <list default="true" id="66df47de-a22b-4cea-910d-d27cae9c2540" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Xe4kTUUofVAX9P7luXFc1Tk6f7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../progjar/progjar2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -177,6 +180,9 @@
       <workItem from="1581611474572" duration="9320000" />
       <workItem from="1581673092092" duration="1230000" />
       <workItem from="1581837197328" duration="7596000" />
+      <workItem from="1581982607315" duration="462000" />
+      <workItem from="1581992037839" duration="1219000" />
+      <workItem from="1582596769821" duration="34000" />
     </task>
     <servers />
   </component>
@@ -201,10 +207,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#serverc/0.0.1366.728@0.0.1366.728" timestamp="1581837878810" />
-    <state x="488" y="148" key="FileChooserDialogImpl" timestamp="1581842840881">
+    <state x="488" y="148" key="FileChooserDialogImpl" timestamp="1582596807250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="148" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581842840881" />
+    <state x="488" y="148" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582596807250" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581661310336" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1581846248821">
       <screen x="0" y="0" width="1366" height="728" />
@@ -242,9 +248,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581400622404" />
-    <state x="465" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1581673126794">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="414" y="209" key="com.intellij.ide.util.TipDialog" timestamp="1582596789757">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="414" y="209" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582596789757" />
     <state x="465" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581673126794" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
