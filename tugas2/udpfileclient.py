@@ -1,15 +1,15 @@
 import socket
 import os
 
-TARGET_IP = "10.151.252.191"
-TARGET_PORT = 5005
+TARGET_IP = "127.0.0.1"
+TARGET_PORT = 5006
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-namafile="bart.png"
+namafile="scoob.png"
 ukuran = os.stat(namafile).st_size
 
-fp = open('bart.png','rb')
+fp = open('scoob.png','rb')
 k = fp.read()
 terkirim=0
 for x in k:
