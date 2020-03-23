@@ -19,7 +19,7 @@ f.close()
 
 f = open("base64encode","wb")
 f.write(isifile)
-f.close
+f.close()
 
 f = open("base64encode","rb")
 l = pesan.encode()+(b" ")+f.read(1024)
