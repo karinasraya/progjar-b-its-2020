@@ -21,7 +21,7 @@
 ![alt text](screenshots/hasil_upload_file.JPG)
 #
 ## Mendownload File
-* Mendownload file karina.pdf dengan cara menjalankan download_file.py sebagai berikut
+* Mendownload file cegah.jpg dengan cara menjalankan download_file.py sebagai berikut
 
 ![alt text](screenshots/download.JPG)
 
