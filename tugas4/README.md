@@ -1,5 +1,8 @@
 # Tugas Progjar 4
+## Dokumentasi Protokol
 
+![alt text](screenshots/protokol_format.JPG)
+#
 ## Membuat Server untuk menerima request dan merespon client 
 * Pertama, jalankan server.py kemudian jalankan masing-masing client
 
@@ -28,7 +31,7 @@
 
 ![alt text](screenshots/hasil_download_file.JPG)
 
-![alt text](screenshots/pdf.JPG)
+![alt text](screenshots/cegah.JPG)
 #
 ## Melihat list file dalam folder 'file'
 * Melihat list file dalam folder 'file' dalam format JSON dengan cara menjalankan melihat_list_file.py sebagai berikut
