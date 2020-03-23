@@ -28,11 +28,9 @@ while True:
     else :
         data = sock.recv(1024)
 
-file = base64.decodestring(file)
+file = base64.b64decode(file)
 f.write(file)
 f.close()
-# f = open("file/cucitangan.jpg","rb")
-# f.close()
-print("file "+requestfile+" berhasil didownload")
 
+print("file "+requestfile+" berhasil didownload")
 sock.close()
