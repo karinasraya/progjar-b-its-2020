@@ -39,12 +39,12 @@ class Chat:
                 username = self.sessions[sessionid]['username']
                 logging.warning("INBOX: {}".format(sessionid))
                 return self.get_inbox(username)
-            elif (command == 'list'):
+            elif (command == 'listuser'):
                 sessionid = j[1].strip()
                 return self.get_list()
             elif (command == 'logout'):
                 sessionid = j[1].strip()
-                return self.get_logout()
+                return self.logout(sessionid)
             else:
                 return {'status': 'ERROR', 'message': '**Protocol Tidak Benar'}
         except KeyError:
@@ -101,7 +101,25 @@ class Chat:
         return {'status': 'OK', 'messages': msgs}
 
     def get_list(self):
-        return {'status': 'OK', 'list': list(self.users.keys())}
+        tokenid = list(self.sessions.keys())
+        listuser = ""
+        for x in tokenid:
+            if self.sessions[x]['username'] in listuser:
+                listuser = listuser
+            else:
+                listuser = listuser + self.sessions[x]['username'] + ' '
+        print(listuser)
+        return {'status': 'OK', 'listuseraktif': listuser}
+
+    def logout(self, sessionid):
+        username = self.sessions[sessionid]['username']
+        listtoken = []
+        for x in self.sessions:
+            if username == self.sessions[x]['username']:
+                listtoken.append(x)
+        for x in listtoken:
+            del self.sessions[x]
+        return {'status': 'OK', 'messages': 'Terima Kash Telah Menggunakan Service Ini'}
 
 if __name__ == "__main__":
     j = Chat()

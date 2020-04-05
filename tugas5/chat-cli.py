@@ -28,14 +28,14 @@ class ChatClient:
                 return self.sendmessage(usernameto,message)
             elif (command=='inbox'):
                 return self.inbox()
-            elif (command=='list'):
-                return self.list()
+            elif (command=='listuser'):
+                return self.listuser()
             elif(command=='logout'):
                 return self.logout()
             else:
-                return "*Maaf, command yang anda masukkan tidak benar"
+                return "*Maaf, command tidak benar"
         except IndexError:
-                return "-Maaf, command yang anda masukkan tidak benar"
+                return "-Maaf, command tidak benar"
 
     def sendstring(self,string):
         try:
@@ -83,21 +83,28 @@ class ChatClient:
         else:
             return "Error, {}" . format(result['message'])
 
-    def list(self):
-        if (self.tokenid==""):
+    def listuser(self):
+        if (self.tokenid == ""):
             return "Error, not authorized"
-        string="list user {} \r\n".format(self.tokenid)
+        string = "listuser {} \r\n".format(self.tokenid)
         result = self.sendstring(string)
-        if result['status']=='OK':
-            return "{}".format(json.dumps(result['list']))
+        if result['status'] == 'OK':
+            print("User sedang aktif ")
+            return "{}".format(json.dumps(result['listuseraktif']))
         else:
             return "Error, {}".format(result['message'])
 
     def logout(self):
         if (self.tokenid == ""):
-            return "Maaf, silahkan login terlebih dahulu"
-        self.tokenid = ""
-        return "Terima kasih telah menggunakan fitur chat ini"
+            return "Error, not authorized"
+        string="logout {} \r\n" . format(self.tokenid)
+        print(string)
+        result = self.sendstring(string)
+        if result['status']=='OK':
+            self.tokenid=""
+            return "{}" . format(json.dumps(result['messages']))
+        else:
+            return "Error, {}" . format(result['message'])
 
 if __name__=="__main__":
     cc = ChatClient()
