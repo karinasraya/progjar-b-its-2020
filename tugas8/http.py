@@ -42,10 +42,10 @@ class HttpServer:
 				object_address = j[1].strip()
 				return self.http_get(object_address, all_headers)
 			if (method=='POST'):
-				lineform = requests[18].split("=")
-				isiform = lineform[1]
+				line_form = requests[18].split("=")
+				isi_form = line_form[1]
 				object_address = j[1].strip()
-				return self.http_post(object_address, all_headers,isiform)
+				return self.http_post(object_address, all_headers,isi_form)
 			else:
 				return self.response(400,'Bad Request','',{})
 		except IndexError:
@@ -62,12 +62,12 @@ class HttpServer:
 		headers['Content-type']= "text/html"
 		return self.response(200,'OK',isi,headers)
 
-	def http_post(self,object_address,headers,isiform):
+	def http_post(self,object_address,headers,isi_form):
 		head = headers
 		headers ={}
 		# isi = "kosong"
 		k ="\n"
 		for atribut in head:
 		    k = k+atribut+"\n"
-		isi = isiform+k
+		isi = "a.Header : \n" + k + "\nb.Isi Form : \n\n" + isi_form
 		return self.response(200,'OK',isi,headers)
